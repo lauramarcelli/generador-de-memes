@@ -1,0 +1,127 @@
+/*General*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;  
+    color: black;
+    font-size: 1em;
+ }
+ h1{
+    font-size: 40px;
+    font-weight: 700;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+ }
+
+ h2{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+ }
+
+ h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-weight: bolder;
+ }
+
+ p{
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+ }
+ 
+.button{
+    cursor: pointer; 
+    color:white;
+    border: none;
+    border-radius: 10px;
+    padding: 0px 10px;
+    background-color:rgb(49, 49, 50);
+    font-weight: 400;
+    height: 36px;
+    }
+
+.button:hover{
+    background-color:rgb(10, 10, 10);
+ }
+header{
+    background-color: rgb(48, 48, 54);
+    min-height: 20vh;
+    min-width: 100%;
+    position: fixed; 
+    text-align: center;
+    padding: 20px;
+}
+body{
+    background-color: rgb(54, 54, 62);
+    max-width: 500vh;
+    min-height: 100vh;
+}
+.canvas{
+    background-color: white;
+    min-height: 85vh;
+    margin-top: 900px;		
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin: auto;
+	max-width: 500px;
+    justify-content: center;	      
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bolder;
+
+}
+#image-meme{
+    margin-top: 100px;
+    width: 100%;
+    flex-grow: 1;
+    background-size: cover;
+    display: block;
+    background-color: black;
+
+}
+main button{
+    cursor: pointer; 
+    color:white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color:rgb(49, 49, 50);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+main button:hover{
+    background-color:rgb(10, 10, 10);
+}
+
+.panel{
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    float: right;
+    width: 260px;
+    height: 100%;
+    background-color: rgb(68, 68, 76);
+    overflow: auto;
+    position: fixed;
+    z-index: 10;
+    padding: 30px 15px;
+    top: 0;
+    right: 0;
+    
+}
