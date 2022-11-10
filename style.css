@@ -127,6 +127,10 @@ main button:hover{
     background-color:rgb(3, 3, 181);
 }
 
+
+/*Paneles*/
+
+
 .panel{
     display: block;
     flex-direction: column;
@@ -142,7 +146,11 @@ main button:hover{
     top: 0;
     right: 0;   
 }
-.image-settings h3{
+
+/*Panel Imagen*/
+
+
+/*.image-settings h3{
     padding: 10px, 10px;
     
 }
@@ -241,8 +249,103 @@ input[type=range]::-webkit-slider-runnable-track {
     border-radius: 5px;
     margin-top: 20px;
     border: 0px;
-    padding: 6px;
-    
-    
-    
+    padding: 6px;    
+}*/
+
+
+
+/*Panel Texto*/
+
+.top h3{
+margin-top: 3px;
+margin-bottom: 0;
 }
+
+.top textarea{
+height: 30px;
+width: 100%;
+border-radius: 5px;
+padding: 1px;
+margin-bottom: 2px;
+margin-top: 4px;
+background-color: rgb(202, 200, 200);
+border-color: rgb(202, 200, 200);
+}
+
+.bottom h3{
+margin-top: 12px;
+margin-bottom: 0;
+font-weight: bolder;
+}
+   
+.bottom textarea{
+height: 30px;
+width: 100%;
+border-radius: 5px;
+padding: 1px;
+margin-bottom: 2px;
+margin-top: 4px;
+background-color: rgb(202, 200, 200);
+border-color: rgb(202, 200, 200);
+}
+
+.typo{
+    margin-top: 12px;
+}
+
+.fonts select{
+height: 30px;
+width: 100%;
+border-radius: 5px;
+padding: 1px;
+margin-bottom: 2px;
+margin-top: 4px;
+background-color: rgb(202, 200, 200);
+border-color: rgb(202, 200, 200);    
+}
+
+.font-size{
+display: flex;
+justify-items: center;
+align-items: center;
+margin-top: 5px;
+}
+
+.font-size input{
+height: 30px;  
+border-radius: 5px;
+padding: 1px;
+margin-bottom: 2px;
+margin-top: 4px;
+background-color: rgb(202, 200, 200);
+border-color: rgb(202, 200, 200); 
+padding: 5px;
+gap: 15px;
+position: relative;
+width: 50%;
+margin-left: 0px;    
+}
+
+.font-size div{ 
+padding: 1px 1px 2px 5px;
+gap: 15px;
+position: relative;
+height: 30px;
+width: 50%;
+margin-left: 0px;    
+}
+
+.font-size button{
+width: 26%;
+border-radius: 5px;
+background-color: rgb(202, 200, 200);
+border-color: rgb(202, 200, 200); 
+margin: 2px;
+}
+
+
+
+
+
+
+
