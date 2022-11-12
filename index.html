@@ -48,7 +48,11 @@
                 <div class="background-container">
                     <h3>Fondo</h3>
                     <div class="background-inputs">
-                        <input type="color" class="color-input" value="#FFFFFF">
+                        <div class="input-color-container"> 
+                            <input type="color" class="input-color" value="#FFFFFF">
+                              <span class="label">#FFFFFF</span>
+                        </div>
+                       
                         <div>
                             <select name="blend-mode" id="" class="blend-input">
                                 <option value="none">Ninguno</option>
@@ -152,19 +156,26 @@
                             </div>
                         </div>
                        
-                        <div class="background-colour">
-                            <h3>Color</h3>
+                        <div class="background-color"> 
                             <div>
-                                <input type="color" value="#000000">
-                                <span>#000000</span>
+                                <h3>Color</h3>
+                                <div class="input-background-color">
+                                    <input type="color" class="input-color" value="#000000">
+                                    <span>#000000</span>
+                                </div>    
                             </div>
                             <div>
                                 <h3>Fondo</h3>
-                                <input type="color" value="FFFFFF">
-                                <span>FFFFFF</span>
-                            </div>
-                            <input type="radio" name="without-back" value="">
-                            <label for="without">fondo transparente</label>                        
+                                <div class="input-back-color">
+                                    <input type="color" class="input-b-color" value="#FFFFFF">
+                                    <span>#FFFFFF</span>
+                                </div>
+                               
+                            </div>                          
+                        </div>
+                        <div class="out-back">
+                            <input type="checkbox" name="without-back" value="">
+                            <label for="without">Fondo transparente</label>
                         </div>
                         <div class="outline">
                             <h3>Contorno</h3>
@@ -194,7 +205,7 @@
                 </div>
                 <div class="text-settings"></div>
                 
-            </section>
+            </section-->
             
     
         </aside>
