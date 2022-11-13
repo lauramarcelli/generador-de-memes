@@ -14,7 +14,7 @@
 </head>
 <body>
     <script src="main.js"></script>
-    <div class="initial">
+    <!--div class="initial">
         <header>
             <h1>Generador de Memes</h1>
             <div class="buttons-header">
@@ -26,6 +26,207 @@
                     Texto</button>
                 <button class="button-header">
                     <i class="fa-regular fa-lightbulb"></i>Modo claro</button>
+            </div>
+        </header>
+        <main>
+            <div class="canvas">
+                <div class="text-t">
+                    <p >Top Text</p>
+                </div>              
+                <div src alt id="image-meme"></div>
+                <div class="text-b">
+                    <p >Bottom Text</p>
+                </div>                   
+            </div>
+            <button>
+                <i class="fa-solid fa-download"></i>
+                Descargar meme</button>
+        </main>
+        <aside class="panel">
+            <section class="panel-image">
+                <h2>Imagen</h2>
+                <div class="image-settings">
+                    <h3>URL</h3>
+                    <input type="text" class="text-url">
+                </div>
+                <div class="background-container">
+                    <h3>Fondo</h3>
+                    <div class="background-inputs">
+                        <div class="input-color-container"> 
+                            <input type="color" class="input-color" value="#FFFFFF">
+                              <span class="label">#FFFFFF</span>
+                        </div>
+                       
+                        <div>
+                            <select name="blend-mode" id="" class="blend-input">
+                                <option value="none">Ninguno</option>
+                                <option value="lighten">Aclarar</option>
+                                <option value="darken">Oscurecer</option>
+                                <option value="difference">Diferencia</option>
+                                <option value="luminosity">Luminosidad</option>
+                                <option value="multiply">Multiplicar</option>
+                            </select>
+                        </div>
+                 
+                    </div>
+                    
+                </div>
+                <div class="filters">
+                    <h3>Filtros</h3>
+                    <div>
+                        <label for="brightness range">Brillo</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="opacity-range">Opacidad</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="contrast-range">Contraste</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="blur-range">Desenfoque</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="grey-range">Escala de grises</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="sepia-range">Sepia</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="hue-range">Hue</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="saturate-range">Saturado</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <div>
+                        <label for="negative-range">Negativo</label>
+                        <input type="range" class="filter-input">
+                    </div>
+                    <button class="button-changes">Restablecer filtros</button>
+    
+                </div>
+            </section>
+    
+            <!--section class="panel-text">
+                <h2>Texto</h2>
+                <div class="text-settings">
+                    <div class="top">
+                        <h3>Superior</h3>
+                        <textarea name="" id="" cols="24" rows="1">Top Text</textarea><br>
+                        <input type="checkbox" name="without" value="without">
+                        <label for="without">Sin texto superior</label> 
+                    </div>
+                    <div class="bottom">
+                        <h3>Inferior</h3>
+                        <textarea name="" id="" cols="24" rows="1">Bottom Text</textarea><br>
+                        <input type="checkbox" name="without2" value="without2">
+                        <label for="without2">Sin texto inferior</label>
+                    </div>
+                    <div class="typo">
+                        <h3>Fuente</h3>
+                        <div class="fonts">
+                            <select name="typography" id="">
+                                <option value="Impact">Impact</option>
+                                <option value="Arial">Arial</option>
+                                <option value="Arial Black">Arial Black</option>
+                                <option value="American Typewriter">American Typewriter</option>
+                                <option value="Andale Mono">Andale Mono</option>
+                                <option value="Comic Sans Ms">Comic Sans Ms</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                            </select>
+                        </div>
+                        <div class="font-size">
+                            <input type="number" class="size" min="12"value="40">
+                            <div>
+                                <button class="left">
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button class="center">
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button class="right">
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+        
+                            </div>
+                        </div>
+                       
+                        <div class="background-color"> 
+                            <div>
+                                <h3>Color</h3>
+                                <div class="input-background-color">
+                                    <input type="color" class="input-color" value="#000000">
+                                    <span>#000000</span>
+                                </div>    
+                            </div>
+                            <div>
+                                <h3>Fondo</h3>
+                                <div class="input-back-color">
+                                    <input type="color" class="input-b-color" value="#FFFFFF">
+                                    <span>#FFFFFF</span>
+                                </div>
+                               
+                            </div>                          
+                        </div>
+                        <div class="out-back">
+                            <input type="checkbox" name="without-back" value="">
+                            <label for="without">Fondo transparente</label>
+                        </div>
+                        <div class="outline">
+                            <h3>Contorno</h3>
+                            <button>Ninguno</button>
+                            <button>Claro</button>
+                            <button>Oscuro</button>
+                        </div>
+                        <div class="padding">
+                            <h3>Espaciado</h3>
+                            <input type="number" min="10" max="50" value="35">
+                        </div>
+                        <div class="line-spacing">
+                            <h3>Interlineado</h3>
+                            <select name="spacing" id="">
+                                <option value="1">1</option>
+                                <option value="1.2">1.2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                            </select>
+                        </div>
+    
+    
+                    </div>
+                    
+                     
+                </div>
+                <div class="text-settings"></div>
+                
+            </section-->
+            
+    
+        <!--/aside>
+    </div-->  
+    
+    <div class="canvas-dark">
+         <header>
+            <h1>Generador de Memes</h1>
+            <div class="buttons-header">
+                <button class="button-header">
+                    <i class="fa-solid fa-image"></i>
+                    Imagen</button>
+                <button class="button-header">
+                    <i class="fa-solid fa-font"></i>
+                    Texto</button>
+                <button class="button-header">
+                    <i class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
             </div>
         </header>
         <main>
@@ -215,186 +416,4 @@
         </aside>
     </div>  
     
-    <!--div class="canvas-dark">
-        <header>
-            <h1>Generador de Memes</h1>
-            <div class="buttons-header">
-                <button class="button image">
-                    <i class="fa-regular fa-image"></i>
-                    Imagen</button>
-                <button class="button text">
-                    <i class="fa-solid fa-font"></i>
-                    Texto</button>
-                <button class="button theme-mode-dark">
-                    <i class="fa-solid fa-lightbulb"></i>Modo Oscuro</button>
-            </div>
-        </header>
-        <main>
-            <div class="canvas">
-                <p>Top Text</p>
-                <div src alt id="image-meme"></div>
-                <p>Bottom Text</p>    
-            </div>
-            <button>
-                <i class="fa-solid fa-download"></i>
-                Descargar meme</button>
-        </main>
-        <aside class="panel">
-            <section class="panel-image">
-                <h2>Imagen</h2>
-                <div class="image-settings">
-                    <h3>URL</h3>
-                    <input type="text">
-                </div>
-                <div>
-                    <h3>Fondo</h3>
-                    <input type="color">
-                    <div>
-                        <select name="blend-mode" id="">
-                            <option value="none">Ninguno</option>
-                            <option value="lighten">Aclarar</option>
-                            <option value="darken">Oscurecer</option>
-                            <option value="difference">Diferencia</option>
-                            <option value="luminosity">Luminosidad</option>
-                            <option value="multiply">Multiplicar</option>
-                        </select>
-                    </div>
-                </div>
-                <div>
-                    <h3>Filtros</h3>
-                    <div>
-                        <label for="brightness range">Brillo</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="opacity-range">Opacidad</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="contrast-range">Contraste</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="blur-range">Desenfoque</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="grey-range">Escala de grises</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="sepia-range">Sepia</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="hue-range">Hue</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="saturate-range">Saturado</label>
-                        <input type="range">
-                    </div>
-                    <div>
-                        <label for="negative-range">Negativo</label>
-                        <input type="range">
-                    </div>
-                    <button class="button-changes">Restablecer filtros</button>
-    
-                </div>
-            </section>
-    
-            <section class="panel-text">
-                <h2>Texto</h2>
-                <div class="text-settings">
-                    <div class="top">
-                        <h3>Superior</h3>
-                        <textarea name="" id="" cols="24" rows="1">Top Text</textarea><br>
-                        <input type="radio" name="without" value="">
-                        <label for="without">sin texto superior</label> 
-                    </div>
-                    <div class="bottom">
-                        <h3>Inferior</h3>
-                        <textarea name="" id="" cols="24" rows="1">Bottom Text</textarea><br>
-                        <input type="radio" name="without" value="">
-                        <label for="without">sin texto inferior</label>
-                    </div>
-                    <div class="typo">
-                        <h3>Fuente</h3>
-                        <div class="fonts">
-                            <select name="typography" id="">
-                                <option value="Impact">Impact</option>
-                                <option value="Arial">Arial</option>
-                                <option value="Arial Black">Arial Black</option>
-                                <option value="American Typewriter">American Typewriter</option>
-                                <option value="Andale Mono">Andale Mono</option>
-                                <option value="Comic Sans Ms">Comic Sans Ms</option>
-                                <option value="Helvetica">Helvetica</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="Times New Roman">Times New Roman</option>
-                            </select>
-                        </div>
-                        <div class="font-size">
-                            <input type="number" class="size" min="12"value="40">
-                        </div>
-                        <div class="aligments">
-                            <button class="left">
-                                <i class="fa-solid fa-align-left"></i>
-                            </button>
-                            <button class="center">
-                                <i class="fa-solid fa-align-center"></i>
-                            </button>
-                            <button class="right">
-                                <i class="fa-solid fa-align-right"></i>
-                            </button>
-    
-                        </div>
-                        <div class="background-colour">
-                            <h3>Color</h3>
-                            <div>
-                                <input type="color" value="#000000">
-                                <span>#000000</span>
-                            </div>
-                            <div>
-                                <h3>Fondo</h3>
-                                <input type="color" value="FFFFFF">
-                                <span>FFFFFF</span>
-                            </div>
-                            <input type="radio" name="without-back" value="">
-                            <label for="without">fondo transparente</label>                        
-                        </div>
-                        <div class="outline">
-                            <h3>Contorno</h3>
-                            <button>Ninguno</button>
-                            <button>Claro</button>
-                            <button>Oscuro</button>
-                        </div>
-                        <div class="padding">
-                            <h3>Espaciado</h3>
-                            <input type="number" min="10" max="50" value="35">
-                        </div>
-                        <div class="line-spacing">
-                            <h3>Interlineado</h3>
-                            <select name="spacing" id="">
-                                <option value="1">1</option>
-                                <option value="1.2">1.2</option>
-                                <option value="1.5">1.5</option>
-                                <option value="2">2</option>
-                                <option value="2.5">2.5</option>
-                            </select>
-                        </div>
-    
-    
-                    </div>
-                    
-                     
-                </div>
-                <div class="text-settings"></div>
-                
-            </section>
-            
-    
-        </aside>
-    </div-->  
-    
-</body>
-</html>
+        
