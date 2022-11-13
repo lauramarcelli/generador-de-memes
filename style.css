@@ -1,4 +1,4 @@
-/*initial
+/*Light-Theme*/
 
 *{
 margin: 0;
@@ -147,8 +147,7 @@ background-color:rgb(3, 3, 181);
 }
 
 
-*Paneles*
-
+/*Paneles*/
 
 .panel{
 display: block;
@@ -163,12 +162,10 @@ position: fixed;
 z-index: 10;
 padding: 30px 15px;
 top: 0;
-right: 0;
-/*box-shadow: 0px 0px 20px black;    
+right: 0;   
 }
 
-
-*Panel Imagen*
+/*Panel Imagen*/
 
 .image-settings{
 margin-top: 12px;
@@ -295,7 +292,7 @@ background-color: grey;
 
 
 
-*Panel Texto*
+/*Panel Texto*/
 
 
 .top{
@@ -524,9 +521,9 @@ border-color: rgb(202, 200, 200);
 }*/
 
 
-/*Canvas-dark*/
+/******************dark-theme*******************/
 
-*{
+.dark-theme *{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -536,7 +533,7 @@ font-size: 15px;
 }
     
     
-h1{
+.dark-theme h1{
 font-size: 40px;
 font-weight: 700;
 display: block;
@@ -545,7 +542,7 @@ color: white;
 margin-bottom: 20px;
 }
     
-h2{
+.dark-theme h2{
 text-align: center;
 font-family: 'Poppins', sans-serif;
 font-weight: bolder;
@@ -553,18 +550,18 @@ font-size: 22px;
 color: white;
 }
     
-h3{
+.dark-theme h3{
 font-family: 'Poppins', sans-serif;
 color: white;    
 }
     
-p{
+.dark-theme p{
 font-size: 20px;
 color: black;
 font-family: 'Poppins', sans-serif;
 }
      
-.button-header{
+.dark-theme .button-header{
 cursor: pointer; 
 color:white;
 border: none;
@@ -575,27 +572,27 @@ font-weight: 400;
 height: 36px;
 }
     
-.fa-solid {
+.dark-theme .fa-solid {
 color: white;
 }
     
-.fa-regular {
+.dark-theme .fa-regular {
 color: white;
 }
     
-.button-header:hover{
+.dark-theme .button-header:hover{
 background-color: rgb(6, 7, 7);
 }
     
-header{
+.dark-theme header{
 background-color: rgb(4, 4, 4);
 min-height: 10vh;
 min-width: 100%;
 text-align: center;
 padding: 15px;
 }
-    
-body{
+
+.dark-theme body{
 background-color: rgb(40, 40, 46);
 max-width: 500vh;
 min-height: 100vh;
@@ -605,7 +602,7 @@ font-weight: 300;
 color: black;
 }
     
-.canvas{
+.dark-theme canvas{
 height: 500px;	
 display: flex;
 flex-direction: column;
@@ -620,7 +617,7 @@ text-align: center;
 font-weight: 900;
 }
     
-.text-t{
+.dark-theme .text-t{
 overflow: hidden;
 width: 100%;
 text-align: center;
@@ -632,7 +629,7 @@ background-color: white;
 font-size: 65px;
 }
     
-.text-b{
+.dark-theme .text-b{
 overflow: hidden;
 width: 100%;
 text-align: center;
@@ -645,7 +642,7 @@ font-size: 35px;
 }
         
     
-#image-meme{
+.dark-theme #image-meme{
 width: 100%;
 flex-grow: 1;
 background-size: cover;
@@ -653,7 +650,7 @@ background-color: black;
 height: 100px;
 }
     
-main button{
+.dark-theme main button{
 cursor: pointer; 
 color:white;
 border: none;
@@ -667,7 +664,7 @@ align-items: center;
 margin: auto;
 }
     
-main button:hover{
+.dark-theme main button:hover{
 background-color:rgb(3, 3, 181);
 }
     
@@ -675,7 +672,7 @@ background-color:rgb(3, 3, 181);
 /*Paneles*/
     
     
-.panel{
+.dark-theme .panel{
 display: block;
 flex-direction: column;
 justify-content: flex-start;
@@ -689,19 +686,19 @@ z-index: 10;
 padding: 30px 15px;
 top: 0;
 right: 0;
-/*box-shadow: 0px 0px 20px black;*/    
+/*box-shadow: 0px 0px 20px black;*/   
 }
     
 /*Panel Imagen*/
     
-.image-settings{
+.dark-theme .image-settings{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 padding: 10px, 10px;    
 }
     
-.text-url{
+.dark-theme .text-url{
 height: 30px;
 width: 100%;
 border-radius: 5px;
@@ -711,14 +708,14 @@ background-color: rgb(40, 40, 46);
 border-color: rgb(40, 40, 46);
 }
     
-.background-container{
+.dark-theme .background-container{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 width: 100%;
 }
     
-.background-inputs{
+.dark-theme .background-inputs{
 display: flex;
 gap: 15px;
 position: relative;
@@ -727,7 +724,7 @@ width: 102%;
 margin-left: 0px;    
 }
     
-.input-color-container {
+.dark-theme .input-color-container {
 width: 120px;
 height: 32px;
 border-radius: 8px;
@@ -735,7 +732,7 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);    
 }
     
-.input-color {
+.dark-theme .input-color {
 appearance: none;
 background: transparent;
 border: none;
@@ -743,26 +740,26 @@ height: 30px;
 width: 28px;      
 }
     
-.input-color::-webkit-color-swatch {
+.dark-theme .input-color::-webkit-color-swatch {
 border-radius: 50%;
 border: none;
 }
     
-.label {
+.dark-theme .label {
 position: relative; 
 display: inline-block; 
 margin: 12px 6px;
 vertical-align: top; 
 }
     
-.label { 
+.dark-theme .label { 
 position: absolute;
 left: 32px;
 top: -8px;
 color: white;
 }
     
-.blend-input{
+.dark-theme .blend-input {
 height: 30px;
 width: 100%;
 border-radius: 5px;
@@ -772,24 +769,24 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
 }
     
-.filters{
+.dark-theme .filters{
 margin-top: 10px;
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 }
     
-input[type=range] {
+.dark-theme input[type=range] {
 -webkit-appearance: none; 
 width: 100%; 
 background: transparent;
 }
       
-input[type=range]::-webkit-slider-thumb {
+.dark-theme input[type=range]::-webkit-slider-thumb {
 -webkit-appearance: none;
 }
     
-input[type=range]::-webkit-slider-thumb {   
+.dark-theme input[type=range]::-webkit-slider-thumb {   
 height: 20px;
 width: 15px;
 border-radius: 20px;
@@ -797,14 +794,14 @@ background: black;
 margin-top: -9px;     
 }
       
-input[type=range]::-webkit-slider-runnable-track {
+.dark-theme input[type=range]::-webkit-slider-runnable-track {
 width: 100%;
 height: 5px;
 background: black;
 border-radius: 5px;
 }
     
-.button-changes{
+.dark-theme .button-changes{
 background-color: rgb(39, 41, 44);
 font-size: 300;
 border-radius: 5px;
@@ -813,7 +810,7 @@ border: 0px;
 padding: 6px;    
 }
     
-.button-changes:hover{
+.dark-theme .button-changes:hover{
 background-color: rgb(6, 7, 7);
 }
     
@@ -822,13 +819,13 @@ background-color: rgb(6, 7, 7);
 /*Panel Texto*/
     
     
-.top{
+.dark-theme .top{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 }
     
-.top textarea{
+.dark-theme .top textarea{
 height: 30px;
 width: 100%;
 border-radius: 5px;
@@ -839,13 +836,13 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
 }
     
-.bottom{
+.dark-theme .bottom{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 }
        
-.bottom textarea{
+.dark-theme .bottom textarea{
 height: 30px;
 width: 100%;
 border-radius: 5px;
@@ -856,13 +853,13 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
 }
     
-.typo{
+.dark-theme .typo{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 }
     
-.fonts select{
+.dark-theme .fonts select{
 height: 30px;
 width: 100%;
 border-radius: 5px;
@@ -873,14 +870,14 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);   
 }
     
-.font-size{
+.dark-theme .font-size{
 display: flex;
 justify-items: center;
 align-items: center;
 margin-top: 5px;
 }
     
-.font-size input{
+.dark-theme .font-size input{
 height: 30px;  
 border-radius: 5px;
 padding: 1px;
@@ -895,7 +892,7 @@ width: 50%;
 margin-left: 0px;    
 }
     
-.font-size div{ 
+.dark-theme .font-size div{ 
 padding: 1px 1px 2px 5px;
 gap: 15px;
 position: relative;
@@ -904,7 +901,7 @@ width: 50%;
 margin-left: 0px;    
 }
     
-.font-size button{
+.dark-theme .font-size button{
 width: 26%;
 border-radius: 5px;
 background-color: rgb(40, 40, 46);
@@ -912,18 +909,18 @@ border: 1px solid rgb(40, 40, 46);
 margin: 2px;
 }
     
-.font-size button:hover{
+.dark-theme .font-size button:hover{
 background-color: rgb(6, 7, 7);
 }
     
- .background-color{
+.dark-theme .background-color{
 display: flex;
 width: 100%;
 height: 60px;
 margin-top: 20px;
 }
     
-.input-background-color {
+.dark-theme .input-background-color {
 display: flex;
 justify-items: center;
 align-items: center;    
@@ -936,7 +933,7 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);     
 }
     
-.input-back-color{
+.dark-theme .input-back-color{
 display: flex;
 justify-items: center;
 align-items: center;      
@@ -948,7 +945,7 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);    
 }
     
-.input-color {
+.dark-theme .input-color {
 appearance: none;
 background: transparent;
 border: none;
@@ -956,7 +953,7 @@ height: 30px;
 width: 28px;      
 }
     
-.input-b-color{
+.dark-theme .input-b-color{
 appearance: none;
 background: transparent;
 border: none;
@@ -964,34 +961,34 @@ height: 30px;
 width: 28px;    
 }
     
-.input-color::-webkit-color-swatch {
+.dark-theme .input-color::-webkit-color-swatch {
 border-radius: 50%;
 border: none;
 }
     
-.input-b-color::-webkit-color-swatch {
+.dark-theme .input-b-color::-webkit-color-swatch {
 border-radius: 50%;
 border: none;
 }
     
     
-.background-color span {
+.dark-theme .background-color span {
 text-align: center;
 color: white;   
 }
     
     
-.out-back{
+.dark-theme .out-back{
 margin-top: 5px;    
 }
     
-.padding{
+.dark-theme .padding{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 }
     
-.padding input{
+.dark-theme .padding input{
 height: 30px;
 width: 100%;
 border-radius: 5px;
@@ -1002,7 +999,7 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
 }
     
-.outline{
+.dark-theme .outline{
 margin-top: 12px;
 margin-bottom: 45px;
 font-weight: bolder;
@@ -1013,11 +1010,11 @@ height: 30px;
 width: 100%;
 }
     
-.outline h3{
+.dark-theme .outline h3{
 margin-bottom: 5px;
 }
     
-.outline button{
+.dark-theme .outline button{
 width: 32%;
 border-radius: 5px;
 background-color: rgb(40, 40, 46);
@@ -1026,18 +1023,18 @@ padding: 2px 5px 2px 0px;
 margin-bottom: 10px;
 }
     
-.outline button:hover{
+.dark-theme .outline button:hover{
 background-color: rgb(6, 7, 7)
 ;
 }
     
-.line-spacing{
+.dark-theme .line-spacing{
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
 }
     
-.line-spacing select{
+.dark-theme .line-spacing select{
 height: 30px;
 width: 100%;
 border-radius: 5px;
