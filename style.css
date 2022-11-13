@@ -49,6 +49,9 @@ background-color: rgb(170, 170, 170);
 font-weight: 400;
 height: 36px;
 }
+.hidden{
+    display: none;
+}
 
 .fa-solid {
 color: black;
@@ -149,7 +152,7 @@ background-color:rgb(3, 3, 181);
 
 /*Paneles*/
 
-.panel{
+.image{
 display: block;
 flex-direction: column;
 justify-content: flex-start;
@@ -163,6 +166,23 @@ z-index: 10;
 padding: 30px 15px;
 top: 0;
 right: 0;   
+}
+
+
+.text{
+display: block;
+flex-direction: column;
+justify-content: flex-start;
+float: right;
+width: 260px;
+height: 100%;
+background-color: rgb(230, 230, 230);
+overflow: auto;
+position: fixed;
+z-index: 10;
+padding: 30px 15px;
+top: 0;
+right: 0;       
 }
 
 /*Panel Imagen*/
@@ -671,24 +691,39 @@ background-color:rgb(3, 3, 181);
     
 /*Paneles*/
     
-    
-.dark-theme .panel{
+.dark-theme .image{
 display: block;
 flex-direction: column;
 justify-content: flex-start;
 float: right;
 width: 260px;
 height: 100%;
-background-color: rgb(60, 60, 69);
+background-color: rgb(230, 230, 230);
 overflow: auto;
 position: fixed;
 z-index: 10;
 padding: 30px 15px;
 top: 0;
-right: 0;
-/*box-shadow: 0px 0px 20px black;*/   
+right: 0;   
 }
     
+    
+.dark-theme .text{
+display: block;
+flex-direction: column;
+justify-content: flex-start;
+float: right;
+width: 260px;
+height: 100%;
+background-color: rgb(230, 230, 230);
+overflow: auto;
+position: fixed;
+z-index: 10;
+padding: 30px 15px;
+top: 0;
+right: 0;       
+}    
+ 
 /*Panel Imagen*/
     
 .dark-theme .image-settings{

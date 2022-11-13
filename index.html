@@ -17,10 +17,10 @@
         <header>
             <h1>Generador de Memes</h1>
             <div class="buttons-header">
-                <button class="button-header">
+                <button id="btn-img" class="button-header">
                     <i class="fa-solid fa-image"></i>
                     Imagen</button>
-                <button class="button-header">
+                <button id="btn-text" class="button-header">
                     <i class="fa-solid fa-font"></i>
                     Texto</button>
                 <button class="button-header"id="btn">
@@ -41,7 +41,105 @@
                 <i class="fa-solid fa-download"></i>
                 Descargar meme</button>
         </main>
-        <aside class="panel">
+        <aside id="container-text" class="text">
+             <section class="panel-text">
+                <h2>Texto</h2>
+                <div class="text-settings">
+                    <div class="top">
+                        <h3>Superior</h3>
+                        <textarea name="" id="" cols="24" rows="1">Top Text</textarea><br>
+                        <input type="checkbox" name="without" value="without">
+                        <label for="without">Sin texto superior</label> 
+                    </div>
+                    <div class="bottom">
+                        <h3>Inferior</h3>
+                        <textarea name="" id="" cols="24" rows="1">Bottom Text</textarea><br>
+                        <input type="checkbox" name="without2" value="without2">
+                        <label for="without2">Sin texto inferior</label>
+                    </div>
+                    <div class="typo">
+                        <h3>Fuente</h3>
+                        <div class="fonts">
+                            <select name="typography" id="">
+                                <option value="Impact">Impact</option>
+                                <option value="Arial">Arial</option>
+                                <option value="Arial Black">Arial Black</option>
+                                <option value="American Typewriter">American Typewriter</option>
+                                <option value="Andale Mono">Andale Mono</option>
+                                <option value="Comic Sans Ms">Comic Sans Ms</option>
+                                <option value="Helvetica">Helvetica</option>
+                                <option value="Verdana">Verdana</option>
+                                <option value="Times New Roman">Times New Roman</option>
+                            </select>
+                        </div>
+                        <div class="font-size">
+                            <input type="number" class="size" min="12"value="40">
+                            <div>
+                                <button class="left">
+                                    <i class="fa-solid fa-align-left"></i>
+                                </button>
+                                <button class="center">
+                                    <i class="fa-solid fa-align-center"></i>
+                                </button>
+                                <button class="right">
+                                    <i class="fa-solid fa-align-right"></i>
+                                </button>
+        
+                            </div>
+                        </div>
+                       
+                        <div class="background-color"> 
+                            <div>
+                                <h3>Color</h3>
+                                <div class="input-background-color">
+                                    <input type="color" class="input-color" value="#000000">
+                                    <span>#000000</span>
+                                </div>    
+                            </div>
+                            <div>
+                                <h3>Fondo</h3>
+                                <div class="input-back-color">
+                                    <input type="color" class="input-b-color" value="#FFFFFF">
+                                    <span>#FFFFFF</span>
+                                </div>
+                               
+                            </div>                          
+                        </div>
+                        <div class="out-back">
+                            <input type="checkbox" name="without-back" value="">
+                            <label for="without">Fondo transparente</label>
+                        </div>
+                        <div class="outline">
+                            <h3>Contorno</h3>
+                            <button>Ninguno</button>
+                            <button>Claro</button>
+                            <button>Oscuro</button>
+                        </div>
+                        <div class="padding">
+                            <h3>Espaciado</h3>
+                            <input type="number" min="10" max="50" value="35">
+                        </div>
+                        <div class="line-spacing">
+                            <h3>Interlineado</h3>
+                            <select name="spacing" id="">
+                                <option value="1">1</option>
+                                <option value="1.2">1.2</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                            </select>
+                        </div>
+    
+    
+                    </div>
+                    
+                     
+                </div>
+                <div class="text-settings"></div>
+                
+            </section>
+        </aside>
+        <aside id="container-imagen" class="image">
             <section class="panel-image">
                 <h2>Imagen</h2>
                 <div class="image-settings">
