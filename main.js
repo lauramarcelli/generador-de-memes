@@ -5,6 +5,7 @@ let btnText = $("#btn-text");
 let btnImg = $("#btn-img");
 let contentImg = $("#container-imagen");
 let contentText = $("#container-text");
+let img =$("image-meme")
 
 
 btn.addEventListener("click", () => {
@@ -27,6 +28,15 @@ contentText.style.display = "block";
 btnImg.addEventListener("click", () => {
 contentImg.style.display = "block";
 contentText.style.display = "none";
+});
+
+
+//url//
+let inputURL = $("#url");
+let imageContainer = $(".image-meme")
+
+inputURL.addEventListener("input", (event) => {
+imageContainer.style.backgroundImage = `url("${event.target.value}")`;
 });
   
   

@@ -49,15 +49,8 @@ background-color: rgb(170, 170, 170);
 font-weight: 400;
 height: 36px;
 }
-.hidden{
-    display: none;
-}
 
 .fa-solid {
-color: black;
-}
-
-.fa-regular {
 color: black;
 }
 
@@ -73,7 +66,7 @@ text-align: center;
 padding: 15px;
 }
 
-body{
+#thebody{
 background-color: rgb(218, 216, 216);
 max-width: 500vh;
 min-height: 100vh;
@@ -127,6 +120,7 @@ font-size: 35px;
 width: 100%;
 flex-grow: 1;
 background-size: cover;
+background-position: center;
 background-color: black;
 height: 100px;
 }
@@ -143,6 +137,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: auto;
+margin-bottom: 5px;
 }
 
 main button:hover{
@@ -543,7 +538,7 @@ border-color: rgb(202, 200, 200);
 
 /******************dark-theme*******************/
 
-.dark-theme *{
+.dark-theme{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -551,8 +546,8 @@ font-family: 'Poppins', sans-serif;
 color: white;
 font-size: 15px;
 }
-    
-    
+
+  
 .dark-theme h1{
 font-size: 40px;
 font-weight: 700;
@@ -577,7 +572,6 @@ color: white;
     
 .dark-theme p{
 font-size: 20px;
-color: black;
 font-family: 'Poppins', sans-serif;
 }
      
@@ -612,8 +606,8 @@ text-align: center;
 padding: 15px;
 }
 
-.dark-theme body{
-background-color: rgb(40, 40, 46);
+.dark-theme #thebody{
+background-color: rgb(49, 49, 55);
 max-width: 500vh;
 min-height: 100vh;
 font-family: 'Poppins', sans-serif;
@@ -698,7 +692,7 @@ justify-content: flex-start;
 float: right;
 width: 260px;
 height: 100%;
-background-color: rgb(230, 230, 230);
+background-color: rgb(85, 85, 88);
 overflow: auto;
 position: fixed;
 z-index: 10;
@@ -715,7 +709,7 @@ justify-content: flex-start;
 float: right;
 width: 260px;
 height: 100%;
-background-color: rgb(230, 230, 230);
+background-color: rgb(85, 85, 88);
 overflow: auto;
 position: fixed;
 z-index: 10;
@@ -784,7 +778,7 @@ border: none;
 position: relative; 
 display: inline-block; 
 margin: 12px 6px;
-vertical-align: top; 
+vertical-align: top;
 }
     
 .dark-theme .label { 
@@ -802,6 +796,7 @@ padding: 3px;
 margin-bottom: 5px;
 background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
+color: white;
 }
     
 .dark-theme .filters{
@@ -809,6 +804,11 @@ margin-top: 10px;
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
+color: white;
+}
+
+.dark-theme .filters label{
+    color: white;
 }
     
 .dark-theme input[type=range] {
@@ -825,14 +825,14 @@ background: transparent;
 height: 20px;
 width: 15px;
 border-radius: 20px;
-background: black;
+background: white;
 margin-top: -9px;     
 }
       
 .dark-theme input[type=range]::-webkit-slider-runnable-track {
 width: 100%;
 height: 5px;
-background: black;
+background: rgb(214, 214, 215);
 border-radius: 5px;
 }
     
@@ -842,7 +842,8 @@ font-size: 300;
 border-radius: 5px;
 margin-top: 20px;
 border: 0px;
-padding: 6px;    
+padding: 6px;
+color: white;    
 }
     
 .dark-theme .button-changes:hover{
@@ -869,7 +870,12 @@ margin-bottom: 2px;
 margin-top: 4px;
 background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
+color: white;
 }
+
+.dark-theme .withouttext{
+color: white;
+} 
     
 .dark-theme .bottom{
 margin-top: 12px;
@@ -886,7 +892,13 @@ margin-bottom: 2px;
 margin-top: 4px;
 background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
+color: white;
 }
+
+.dark-theme .withouttext2{
+color: white;
+} 
+  
     
 .dark-theme .typo{
 margin-top: 12px;
@@ -902,7 +914,8 @@ padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
 background-color: rgb(40, 40, 46);
-border: 1px solid rgb(40, 40, 46);   
+border: 1px solid rgb(40, 40, 46);
+color: white;   
 }
     
 .dark-theme .font-size{
@@ -924,7 +937,8 @@ padding: 5px;
 gap: 15px;
 position: relative;
 width: 50%;
-margin-left: 0px;    
+margin-left: 0px;
+color: white;    
 }
     
 .dark-theme .font-size div{ 
@@ -942,6 +956,7 @@ border-radius: 5px;
 background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46); 
 margin: 2px;
+color: white;
 }
     
 .dark-theme .font-size button:hover{
@@ -1033,6 +1048,10 @@ margin-top: 4px;
 background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
 }
+
+.dark-theme .withoutback{
+    color: white;
+}
     
 .dark-theme .outline{
 margin-top: 12px;
@@ -1056,11 +1075,16 @@ background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46); 
 padding: 2px 5px 2px 0px;
 margin-bottom: 10px;
+color: white;
 }
     
 .dark-theme .outline button:hover{
 background-color: rgb(6, 7, 7)
 ;
+}
+
+.dark-theme .input{
+    color: white;
 }
     
 .dark-theme .line-spacing{
@@ -1078,6 +1102,11 @@ margin-bottom: 2px;
 margin-top: 4px;
 background-color: rgb(40, 40, 46);
 border: 1px solid rgb(40, 40, 46);
+color: white;
+}
+
+.dark-theme .padding-options{
+color: white;
 }
 
 
