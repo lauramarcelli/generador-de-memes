@@ -9,6 +9,11 @@ color: black;
 font-size: 15px;
 }
 
+main{
+background-color: rgb(218, 216, 216);
+min-height: 100vh;
+margin-top: -22px;
+}
 
 h1{
 font-size: 40px;
@@ -66,8 +71,7 @@ text-align: center;
 padding: 15px;
 }
 
-#thebody{
-background-color: rgb(218, 216, 216);
+body{
 max-width: 500vh;
 min-height: 100vh;
 font-family: 'Poppins', sans-serif;
@@ -314,6 +318,10 @@ background-color: grey;
 margin-top: 12px;
 margin-bottom: 0;
 font-weight: bolder;
+}
+
+.hidden{
+display: none;
 }
 
 .top textarea{
@@ -606,7 +614,7 @@ text-align: center;
 padding: 15px;
 }
 
-.dark-theme #thebody{
+.dark-theme body{
 background-color: rgb(49, 49, 55);
 max-width: 500vh;
 min-height: 100vh;
@@ -614,6 +622,12 @@ font-family: 'Poppins', sans-serif;
 font-size: 15px;
 font-weight: 300;
 color: black;
+}
+
+.dark-theme main{
+background-color: rgb(49, 49, 55);
+min-height: 100vh;
+margin-top: -22px;
 }
     
 .dark-theme canvas{
@@ -735,6 +749,7 @@ padding: 3px;
 margin-bottom: 5px;
 background-color: rgb(40, 40, 46);
 border-color: rgb(40, 40, 46);
+color: white;
 }
     
 .dark-theme .background-container{

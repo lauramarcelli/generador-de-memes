@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/11e1b50ec9.js" crossorigin="anonymous"></script>
     <title>Editor de memes</title>
 </head>
-<body id="thebody">    
+<body>    
     <div>
         <header>
             <h1>Generador de Memes</h1>
@@ -29,11 +29,11 @@
         <main>
             <div class="canvas">
                 <div class="text-t">
-                    <p >Top Text</p>
+                    <p id="top-text">Top Text</p>
                 </div>              
                 <div src alt id="image-meme" class=".image-meme"></div>
                 <div class="text-b">
-                    <p >Bottom Text</p>
+                    <p id="bottom-text" >Bottom Text</p>
                 </div>                   
             </div>
             <button>
@@ -44,15 +44,15 @@
              <section class="panel-text">
                 <h2>Texto</h2>
                 <div class="text-settings">
-                    <div class="top">
+                    <div class="top" id="topdiv">
                         <h3>Superior</h3>
-                        <textarea name="" id="" cols="24" rows="1">Top Text</textarea><br>
-                        <input type="checkbox" name="without" value="without">
+                        <textarea name="" id="toptext" cols="24" rows="1">Top Text</textarea><br>
+                        <input type="checkbox" id="withouttexsup" name="without" value="without">
                         <label class="withouttext" for="without">Sin texto superior</label> 
                     </div>
                     <div class="bottom">
                         <h3>Inferior</h3>
-                        <textarea name="" id="" cols="24" rows="1">Bottom Text</textarea><br>
+                        <textarea name="" id="bottomtext" cols="24" rows="1">Bottom Text</textarea><br>
                         <input type="checkbox" name="without2" value="without2">
                         <label class="withouttext2" for="without2">Sin texto inferior</label>
                     </div>
