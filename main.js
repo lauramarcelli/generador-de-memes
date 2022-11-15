@@ -46,29 +46,46 @@ imageContainer.style.backgroundImage = `url("${event.target.value}")`;
 
 let textareaTopText = $("#toptext");
 let pTopText = $("#top-text")
+let textareaBottomText = $("#bottomtext");
+let pBottomText = $("#bottom-text");
+let checkBoxTop = $("#withouttexsup");
+let checkBoxBottom = $("#withouttexinf");
 
 textareaTopText.addEventListener("input", (event) => {
 pTopText.innerText = event.target.value
 })
 
 
-let textareaBottomText = $("#bottomtext");
-let pBottomText = $("#bottom-text")
-
 textareaBottomText.addEventListener("input", (event) => {
 pBottomText.innerText = event.target.value
 })
 
 
+//checkbox's
 
-let checkBoxTop = $("#withouttexsup");
-let sinTopDiv = $("#top-text")
 
-checkBoxTop.addEventListener("click", () => {
-sinTopDiv.classList.toggle = ("hidden");
+checkBoxTop.addEventListener("click", () =>{
+pTopText.classList.toggle("hidden");
+});
+
+checkBoxBottom.addEventListener("click", () =>{
+pBottomText.classList.toggle("hidden");
+});
+    
+
+
+//typography
+
+let typesTypography = $("#typesoftypo");
+let canvasArea = $("#canvas"); 
+
+typesTypography.addEventListener('change', (event)=>{
+let choosenTypo = event.target.value;
+
+canvasArea.style.fontFamily = choosenTypo;
+
 });
 
 
 
-  
   
