@@ -9,6 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@900&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+    integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    ></script>
     <script src="https://kit.fontawesome.com/11e1b50ec9.js" crossorigin="anonymous"></script>
     <title>Editor de memes</title>
 </head>
@@ -23,16 +35,18 @@
                 <button id="btn-text" class="button-header">
                     <i class="fa-solid fa-font"></i>
                     Texto</button>
-                <button class="button-header"id="btn"></button>
+                <button class="button-header"id="btn">
+                    <i class="fa-solid fa-light-switch"></i>
+                </button>
             </div>
         </header>
         <main>
-            <div class="canvas" id="canvas">
+            <div id="canvass" class="canvas">
                 <p class="text-t" id="top-text">Top Text</p>           
                 <div src alt id="image-meme" class=".image-meme"></div>
                 <p class="text-b" id="bottom-text" >Bottom Text</p>               
             </div>
-            <button>
+            <button id="btndownload">
                 <i class="fa-solid fa-download"></i>
                 Descargar meme</button>
         </main>
@@ -68,15 +82,15 @@
                             </select>
                         </div>
                         <div class="font-size">
-                            <input type="number" class="size" min="12"value="40">
+                            <input type="number" id="resizing" class="size" min="12"value="40">
                             <div>
-                                <button class="left">
+                                <button id="lefttext" class="left">
                                     <i class="fa-solid fa-align-left"></i>
                                 </button>
-                                <button class="center">
+                                <button id="centertext" class="center">
                                     <i class="fa-solid fa-align-center"></i>
                                 </button>
-                                <button class="right">
+                                <button id="righttext" class="right">
                                     <i class="fa-solid fa-align-right"></i>
                                 </button>
         
@@ -87,21 +101,21 @@
                             <div>
                                 <h3>Color</h3>
                                 <div class="input-background-color">
-                                    <input type="color" class="input-color" value="#000000">
+                                    <input type="color" id="fontcolor" class="input-color" value="#000000">
                                     <span>#000000</span>
                                 </div>    
                             </div>
                             <div>
                                 <h3>Fondo</h3>
                                 <div class="input-back-color">
-                                    <input type="color" class="input-b-color" value="#FFFFFF">
+                                    <input type="color" id="backcolor" class="input-b-color" value="#FFFFFF">
                                     <span>#FFFFFF</span>
                                 </div>
                                
                             </div>                          
                         </div>
                         <div class="out-back">
-                            <input type="checkbox" name="without-back" value="">
+                            <input id="withoutback" type="checkbox" name="without-back" value="">
                             <label class="withoutback" for="without">Fondo transparente</label>
                         </div>
                         <div class="outline">

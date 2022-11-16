@@ -42,7 +42,11 @@ inputURL.addEventListener("input", (event) => {
 imageContainer.style.backgroundImage = `url("${event.target.value}")`;
 });
 
-//text-settings//
+
+
+
+
+/////////////////////TEXT PANEL/////////////////////////////
 
 let textareaTopText = $("#toptext");
 let pTopText = $("#top-text")
@@ -50,19 +54,28 @@ let textareaBottomText = $("#bottomtext");
 let pBottomText = $("#bottom-text");
 let checkBoxTop = $("#withouttexsup");
 let checkBoxBottom = $("#withouttexinf");
+let checkBackground = $("#withoutback");
+let typesTypography = $("#typesoftypo");
+//let canvasArea = $("#canvass"); 
+let textLeft = $("#lefttext");
+let textCenter = $("#centertext");
+let textRight = $("#righttext");
+let changeSize = $("#resizing")
+let colorFont = $("#fontcolor");
+let backColor = $("#backcolor");
+
 
 textareaTopText.addEventListener("input", (event) => {
 pTopText.innerText = event.target.value
 })
-
 
 textareaBottomText.addEventListener("input", (event) => {
 pBottomText.innerText = event.target.value
 })
 
 
-//checkbox's
 
+//checkbox's
 
 checkBoxTop.addEventListener("click", () =>{
 pTopText.classList.toggle("hidden");
@@ -71,21 +84,92 @@ pTopText.classList.toggle("hidden");
 checkBoxBottom.addEventListener("click", () =>{
 pBottomText.classList.toggle("hidden");
 });
+
+
+checkBackground.addEventListener("click", () =>{
+pBottomText.classList.toggle("hidden");
+pTopText.classList.toggle("hidden");
+});
     
-
-
+   
 //typography
 
-let typesTypography = $("#typesoftypo");
-let canvasArea = $("#canvas"); 
-
-typesTypography.addEventListener('change', (event)=>{
+typesTypography.addEventListener("change", (event) => {
 let choosenTypo = event.target.value;
 
-canvasArea.style.fontFamily = choosenTypo;
-
+pBottomText.style.fontFamily = choosenTypo;
+pTopText.style.fontFamily = choosenTypo;
 });
 
 
+
+//text align
+
+textLeft.addEventListener("click", (event) => {
+
+pTopText.style.textAlign = "left";
+pBottomText.style.textAlign = "left";
+})
+  
+textCenter.addEventListener("click", (event) => {
+
+pTopText.style.textAlign = "center";
+pBottomText.style.textAlign = "center";
+})
+ 
+textRight.addEventListener("click", (event) => {
+
+pTopText.style.textAlign = "right";
+pBottomText.style.textAlign = "right";
+})
+
+
+
+//re-sizing option
+
+changeSize.addEventListener('input', (event)=>{
+let newSize = event.target.value;
+  
+pTopText.style.fontSize = `${newSize}px`;
+pBottomText.style.fontSize = `${newSize}px`;
+})
+
+
+
+//Color Selection
+
+colorFont.addEventListener("change", (event) => {
+let colorful = event.target.value;
+
+pTopText.style.color = colorful;
+pBottomText.style.color = colorful;
+});
+
+
+backColor.addEventListener("change", (event) => {
+let coloring = event.target.value;
+    
+pTopText.style.backgroundColor = coloring;
+pBottomText.style.backgroundColor = coloring; 
+});
+        
+
+//Contouring
+
+//Download Meme
+
+let canvasArea = $("#canvass");
+let btnDown = $ ("#btndownload");
+
+console.log (canvasArea)
+
+
+const descargarMeme = () => {
+domtoimage.toBlob(canvasArea).then(function (blob) {
+saveAs(blob, "aqui-mi-meme.jpg");
+});
+};
+
+btnDown.addEventListener("click", descargarMeme);
 
   

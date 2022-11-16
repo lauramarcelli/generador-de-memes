@@ -7,13 +7,31 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;  
 color: black;
 font-size: 15px;
+font-weight: 300;
 }
 
 main{
+max-width: 500vw;    
 background-color: rgb(218, 216, 216);
-min-height: 100vh;
-margin-top: -22px;
+min-height: calc(100vh - 150px);
+
 }
+
+.canvas{
+  
+height: 500px;	
+display: flex;
+flex-direction: column;
+margin: auto;
+margin-bottom: 30px;
+max-width: 500px;
+width: 100%;
+justify-content: center;	      
+text-align: center;
+font-weight: 900;
+background-color: white;
+}
+    
 
 h1{
 font-size: 40px;
@@ -65,59 +83,24 @@ background-color:grey;
 
 header{
 background-color: rgb(189, 186, 186);
-min-height: 10vh;
+height: 150px;
 min-width: 100%;
 text-align: center;
 padding: 15px;
 }
 
-body{
-max-width: 500vh;
-min-height: 100vh;
-font-family: 'Poppins', sans-serif;
-font-size: 15px;
-font-weight: 300;
-color: black;
-}
-
-.canvas{
-height: 500px;	
-display: flex;
-flex-direction: column;
-margin: auto;
-margin-bottom: 30px;
-margin-top: 20px;
-max-width: 500px;
-width: 100%;
-justify-content: center;	      
-align-items: center;
-text-align: center;
-font-weight: 900;
-}
-
 .text-t{
-overflow: hidden;
-width: 100%;
 text-align: center;
-justify-content: center;
-align-items: center;
 font-size: 25px;
-padding: 35px 50px;
-background-color: white;
+padding: 15px;
 }
 
 .text-b{
-overflow: hidden;
-width: 100%;
 text-align: center;
-justify-content: center;
-align-items: center;
 font-size: 25px;
-padding: 35px 50px;
-background-color: white;
+padding: 15px;
 }
     
-
 #image-meme{
 width: 100%;
 flex-grow: 1;
@@ -150,16 +133,14 @@ background-color:rgb(3, 3, 181);
 /*Paneles*/
 
 .image{
-display: block;
 flex-direction: column;
 justify-content: flex-start;
 float: right;
 width: 260px;
-height: 100%;
+height: 100vh;
 background-color: rgb(230, 230, 230);
 overflow: auto;
 position: fixed;
-z-index: 10;
 padding: 30px 15px;
 top: 0;
 right: 0;   
@@ -167,16 +148,14 @@ right: 0;
 
 
 .text{
-display: block;
 flex-direction: column;
 justify-content: flex-start;
 float: right;
 width: 260px;
-height: 100%;
+height: 100vh;
 background-color: rgb(230, 230, 230);
 overflow: auto;
 position: fixed;
-z-index: 10;
 padding: 30px 15px;
 top: 0;
 right: 0;       
@@ -551,6 +530,7 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;  
 color: white;
 font-size: 15px;
+font-weight: 300;
 }
 
   
@@ -591,6 +571,8 @@ background-color: rgb(39, 41, 44);
 font-weight: 400;
 height: 36px;
 }
+
+
     
 .dark-theme .fa-solid {
 color: white;
@@ -606,74 +588,56 @@ background-color: rgb(6, 7, 7);
     
 .dark-theme header{
 background-color: rgb(4, 4, 4);
-min-height: 10vh;
+height: 150px;
 min-width: 100%;
 text-align: center;
 padding: 15px;
 }
 
-.dark-theme body{
-background-color: rgb(49, 49, 55);
-max-width: 500vh;
-min-height: 100vh;
-font-family: 'Poppins', sans-serif;
-font-size: 15px;
-font-weight: 300;
-color: black;
-}
 
 .dark-theme main{
 background-color: rgb(49, 49, 55);
-min-height: 100vh;
-margin-top: -22px;
+max-width: 500vw;
+min-height: calc(100vh - 150px)
 }
-    
+
+
 .dark-theme canvas{
 height: 500px;	
 display: flex;
 flex-direction: column;
 margin: auto;
 margin-bottom: 30px;
-margin-top: 20px;
 max-width: 500px;
 width: 100%;
 justify-content: center;	      
-align-items: center;
 text-align: center;
 font-weight: 900;
+background-color: white;
 }
+
     
 .dark-theme .text-t{
-overflow: hidden;
-width: 100%;
 text-align: center;
-justify-content: center;
-align-items: center;
 font-size: 25px;
-padding: 35px 50px;
-background-color: white;
+padding: 15px;
 }
     
 .dark-theme .text-b{
-overflow: hidden;
-width: 100%;
 text-align: center;
-justify-content: center;
-align-items: center;
 font-size: 25px;
-padding: 35px 50px;
-background-color: white;
+padding: 15px;
 }
-        
-    
+          
 .dark-theme #image-meme{
-width: 100%;
 flex-grow: 1;
 background-size: cover;
+background-position: center;
 background-color: black;
 height: 100px;
 }
-    
+
+   
 .dark-theme main button{
 cursor: pointer; 
 color:white;
@@ -1119,7 +1083,3 @@ color: white;
 .dark-theme .padding-options{
 color: white;
 }
-
-
-
-
