@@ -12,13 +12,12 @@ font-weight: 300;
 
 main{
 max-width: 500vw;    
-background-color: rgb(218, 216, 216);
+background-color: rgb(232, 232, 53);
 min-height: calc(100vh - 150px);
 
 }
 
-.canvas{
-  
+.canvas{ 
 height: 500px;	
 display: flex;
 flex-direction: column;
@@ -68,7 +67,7 @@ color:black;
 border: none;
 border-radius: 10px;
 padding: 0px 10px;
-background-color: rgb(170, 170, 170);
+background-color: rgb(232, 232, 53);
 font-weight: 400;
 height: 36px;
 }
@@ -78,11 +77,11 @@ color: black;
 }
 
 .button-header:hover{
-background-color:grey;
+background-color:rgb(188, 188, 42);
 }
 
 header{
-background-color: rgb(189, 186, 186);
+background-color: rgb(124, 232, 53);
 height: 150px;
 min-width: 100%;
 text-align: center;
@@ -116,7 +115,7 @@ color:white;
 border: none;
 border-radius: 10px;
 padding: 10px 10px;
-background-color:blue;
+background-color:rgb(89, 196, 232);
 font-weight: 400;
 display: flex;
 justify-content: center;
@@ -138,7 +137,7 @@ justify-content: flex-start;
 float: right;
 width: 260px;
 height: 100vh;
-background-color: rgb(230, 230, 230);
+background-color: rgb(232, 53, 232);
 overflow: auto;
 position: fixed;
 padding: 30px 15px;
@@ -153,7 +152,7 @@ justify-content: flex-start;
 float: right;
 width: 260px;
 height: 100vh;
-background-color: rgb(230, 230, 230);
+background-color: rgb(232, 53, 232);
 overflow: auto;
 position: fixed;
 padding: 30px 15px;
@@ -176,8 +175,8 @@ width: 100%;
 border-radius: 5px;
 padding: 3px;
 margin-bottom: 5px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);
+background-color: white;
+border-color: white;
 }
 
 .background-container{
@@ -200,14 +199,13 @@ margin-left: 0px;
 width: 120px;
 height: 32px;
 border-radius: 8px;
-background-color: rgb(202, 200, 200);
-border: 1px solid rgb(202, 200, 200);    
+background-color: white;
+border: 1px solid white;    
 }
 
 .input-color {
 appearance: none;
 background: transparent;
-border: none;
 height: 30px;
 width: 28px;      
 }
@@ -237,8 +235,8 @@ width: 100%;
 border-radius: 5px;
 padding: 3px;
 margin-bottom: 5px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);
+background-color: white;
+border-color: white;
 }
 
 .filters{
@@ -262,19 +260,19 @@ input[type=range]::-webkit-slider-thumb {
 height: 20px;
 width: 15px;
 border-radius: 20px;
-background: rgb(87, 86, 86);
+background: black;
 margin-top: -9px;     
 }
   
 input[type=range]::-webkit-slider-runnable-track {
 width: 100%;
 height: 5px;
-background: rgb(87, 86, 86);
+background: black;
 border-radius: 5px;
 }
 
 .button-changes{
-background-color: rgb(167, 166, 166);
+background-color: rgb(89, 196, 232);
 font-size: 300;
 border-radius: 5px;
 margin-top: 20px;
@@ -283,7 +281,7 @@ padding: 6px;
 }
 
 .button-changes:hover{
-background-color: grey;
+background-color: rgb(71, 154, 182);
 }
 
 
@@ -308,8 +306,8 @@ border-radius: 5px;
 padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);
+background-color: white;
+border-color: white;
 }
 
 .bottom{
@@ -325,8 +323,8 @@ border-radius: 5px;
 padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);
+background-color: white;
+border-color: white;
 }
 
 .typo{
@@ -342,8 +340,8 @@ border-radius: 5px;
 padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);    
+background-color: white;
+border-color:white;    
 }
 
 .font-size{
@@ -359,8 +357,8 @@ border-radius: 5px;
 padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200); 
+background-color: white;
+border-color: white; 
 padding: 5px;
 gap: 15px;
 position: relative;
@@ -380,8 +378,8 @@ margin-left: 0px;
 .font-size button{
 width: 26%;
 border-radius: 5px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200); 
+background-color:white;
+border-color: white; 
 margin: 2px;
 }
 
@@ -405,8 +403,8 @@ width: 110px;
 height: 32px;
 margin-right: 20px;
 border-radius: 5px;
-background-color: rgb(202, 200, 200);
-border: 1px solid rgb(202, 200, 200);    
+background-color:white;
+border: 1px solid white;    
 }
 
 .input-back-color{
@@ -417,8 +415,8 @@ margin-top: 5px;
 width: 110px;
 height: 32px;
 border-radius: 5px;
-background-color: rgb(202, 200, 200);
-border: 1px solid rgb(202, 200, 200);    
+background-color:white;
+border: 1px solid white;    
 }
 
 .input-color {
@@ -471,8 +469,8 @@ border-radius: 5px;
 padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);
+background-color: white;
+border-color: white;
 }
 
 .outline{
@@ -493,8 +491,8 @@ margin-bottom: 5px;
 .outline button{
 width: 32%;
 border-radius: 5px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200); 
+background-color: white;
+border-color: white; 
 padding: 2px 5px 2px 0px;
 margin-bottom: 10px;
 }
@@ -516,8 +514,8 @@ border-radius: 5px;
 padding: 1px;
 margin-bottom: 2px;
 margin-top: 4px;
-background-color: rgb(202, 200, 200);
-border-color: rgb(202, 200, 200);
+background-color: white;
+border-color: white;
 }*/
 
 
