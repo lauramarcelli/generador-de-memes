@@ -154,7 +154,21 @@ pBottomText.style.backgroundColor = coloring;
 });
         
 
-//Contouring
+//Borderline
+
+let noBorderline = $ ("#none")
+let lightBorderline = $ ("#lighten")
+let darkBorderline = $ ("#darken")
+
+noBorderline.addEventListener('click', (event)=>{
+	
+pBottomText.classList.remove("outlinedark");
+pTopText.classList.remove("outlinedark");
+pBottomText.classList.remove("outlinelight");
+pTopText.classList.add("outlinedark");
+   
+})
+
 
 
 
