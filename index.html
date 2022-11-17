@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@900&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://kit.fontawesome.com/11e1b50ec9.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <title>Editor de memes</title>
 </head>
 <body>    
@@ -28,7 +34,7 @@
                     <i class="fa-solid fa-font"></i>
                     Texto</button>
                 <button class="button-header"id="btn">
-                    Modo Claro</i>
+                    Modo Oscuro</i>
                 </button>
             </div>
         </header>
@@ -118,11 +124,11 @@
                         </div>
                         <div class="padding">
                             <h3>Espaciado</h3>
-                            <input class="padding-options"type="number" min="10" max="50" value="35">
+                            <input id="padding-options" class="padding-options"type="number" min="10" max="50" value="35">
                         </div>
                         <div class="line-spacing">
                             <h3>Interlineado</h3>
-                            <select name="spacing" id="">
+                            <select id="spacing-letters" name="spacing" id="">
                                 <option value="1">1</option>
                                 <option value="1.2">1.2</option>
                                 <option value="1.5">1.5</option>

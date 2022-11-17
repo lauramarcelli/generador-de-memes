@@ -162,22 +162,38 @@ let darkBorderline = $ ("#darken")
 
 noBorderline.addEventListener('click', (event)=>{
 	
+pBottomText.classList.remove("outlinelight");
+pTopText.classList.remove("outlinelight");
 pBottomText.classList.remove("outlinedark");
 pTopText.classList.remove("outlinedark");
-pBottomText.classList.remove("outlinelight");
-pTopText.classList.add("outlinedark");
    
 })
 
+lightBorderline.addEventListener('click', (event)=>{
+	
+pBottomText.classList.add("outlinelight");
+pTopText.classList.add("outlinelight");
+pBottomText.classList.remove("outlinedark");
+pTopText.classList.remove("outlinedark");
+       
+})
+
+darkBorderline.addEventListener('click', (event)=>{
+	
+pBottomText.classList.remove("outlinelight");
+pTopText.classList.remove("outlinelight");
+pBottomText.classList.add("outlinedark");
+pTopText.classList.add("outlinedark");
+
+})
 
 
-
-//Download Meme
+//Download Meme - NO RESUELTO!!
 
 let canvasArea = $("#canvass");
 let btnDown = $ ("#btndownload");
 
-console.log (canvasArea)
+/*console.log (canvasArea)*/
 
 
 const descargarMeme = () => {
@@ -187,5 +203,33 @@ saveAs(blob, "aqui-mi-meme.jpg");
 };
 
 btnDown.addEventListener("click", descargarMeme);
+
+
+//Padding
+
+let spacingBorders = $ ("#padding-options")
+
+spacingBorders.addEventListener('input', (event)=>{
+let selected = event.target.value;
+
+pTopText.style.padding = `${selected}px`
+pBottomText.style.padding = `${selected}px`
+})
+
+
+//LineHeight
+
+let spacingLetters = $ ("#spacing-letters")
+
+spacingLetters.addEventListener('input', (event)=>{
+let selectedSpacing = event.target.value;
+
+pTopText.style.lineHeight = selectedSpacing
+pBottomText.style.lineHeight = selectedSpacing
+})
+
+    
+    
+
 
   
