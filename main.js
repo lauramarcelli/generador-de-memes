@@ -224,7 +224,9 @@ pBottomText.style.lineHeight = selectedSpacing
 
 //FILTROS//
 
-//variables
+
+
+//VARIABLES
 
 let inputBright = $("#bright-input");
 let inputOpacity = $("#input-opacity");
@@ -236,22 +238,43 @@ let inputHue = $("#input-hue");
 let inputSaturated = $("#input-saturado");
 let inputNegative = $("#input-negativo");
 let memeBox = $("#image-meme");
+let btnReset = $("reset-filters");
 
 
-//function
+
+//FUNCTIONS
+
+//setting
 
 const settingFilters = () => {
-   let brightness = inputBright.value = 1;
+   let brightness = inputBright.value;
    let opacity = inputOpacity.value;
    let contrast = inputContrast.value;
-   let blur = inputBlur.value;
+   let bluring = inputBlur.value;
    let greys = inputGreys.value;
    let sepia = inputSepia.value;
    let hue = inputHue.value;
    let saturated = inputSaturated.value;
    let negative = inputNegative.value;
+
    memeBox.style.filter = `brightness(${brightness}) opacity(${opacity}) contrast(${contrast}%) blur(${blur}px) grayscale(${greys}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturated}%) invert(${negative}%)`;
 };
+
+//unsetting 
+
+const filterReset = () => {
+   brightness.value = 1;
+   opacity.value = 1;
+   contrast.value = 100;
+   bluring.value = 0;
+   greys.value = 0;
+   sepia.value = 0;
+   hue.value = 0;
+   saturated.value = 100;
+   negative.value = 0;
+
+   settingFilters()
+}
 
 
 //filters
@@ -266,3 +289,6 @@ inputHue.addEventListener("change", settingFilters);
 inputSaturated.addEventListener("change", settingFilters);
 inputNegative.addEventListener("change", settingFilters);
 
+//reset filters
+
+btnReset.addEventListener("click", filterReset)
