@@ -1,3 +1,6 @@
+/////////////////////MAIN SETTINGS/////////////////////////////
+
+
 const $ = (selector) => document.querySelector(selector);
 
 
@@ -35,6 +38,7 @@ contentText.style.display = "none";
 
 
 //url//
+
 let inputURL = $("#url");
 let imageContainer = $("#image-meme")
 
@@ -43,6 +47,15 @@ imageContainer.style.backgroundImage = `url("${event.target.value}")`;
 });
 
 
+//Download Meme 
+
+const descargarMeme = () => {
+domtoimage.toBlob(canvasArea).then(function (blob) {
+saveAs(blob, "aqui-mi-meme.jpg");
+});
+};
+    
+btnDown.addEventListener("click", descargarMeme);
 
 
 
@@ -56,13 +69,20 @@ let checkBoxTop = $("#withouttexsup");
 let checkBoxBottom = $("#withouttexinf");
 let checkBackground = $("#withoutback");
 let typesTypography = $("#typesoftypo");
-//let canvasArea = $("#canvass"); 
+let canvasArea = $("#canvass"); 
 let textLeft = $("#lefttext");
 let textCenter = $("#centertext");
 let textRight = $("#righttext");
 let changeSize = $("#resizing")
 let colorFont = $("#fontcolor");
 let backColor = $("#backcolor");
+let noBorderline = $ ("#none")
+let lightBorderline = $ ("#lighten")
+let darkBorderline = $ ("#darken")
+let btnDown = $ ("#btndownload");
+let spacingBorders = $ ("#padding-options")
+let spacingLetters = $ ("#spacing-letters")
+
 
 
 textareaTopText.addEventListener("input", (event) => {
@@ -72,7 +92,6 @@ pTopText.innerText = event.target.value
 textareaBottomText.addEventListener("input", (event) => {
 pBottomText.innerText = event.target.value
 })
-
 
 
 //checkbox's
@@ -102,7 +121,6 @@ pTopText.style.fontFamily = choosenTypo;
 });
 
 
-
 //text align
 
 textLeft.addEventListener("click", (event) => {
@@ -124,7 +142,6 @@ pBottomText.style.textAlign = "right";
 })
 
 
-
 //re-sizing option
 
 changeSize.addEventListener('input', (event)=>{
@@ -133,7 +150,6 @@ let newSize = event.target.value;
 pTopText.style.fontSize = `${newSize}px`;
 pBottomText.style.fontSize = `${newSize}px`;
 })
-
 
 
 //Color Selection
@@ -155,10 +171,6 @@ pBottomText.style.backgroundColor = coloring;
         
 
 //Borderline
-
-let noBorderline = $ ("#none")
-let lightBorderline = $ ("#lighten")
-let darkBorderline = $ ("#darken")
 
 noBorderline.addEventListener('click', (event)=>{
 	
@@ -188,26 +200,7 @@ pTopText.classList.add("outlinedark");
 })
 
 
-//Download Meme - NO RESUELTO!!
-
-let canvasArea = $("#canvass");
-let btnDown = $ ("#btndownload");
-
-/*console.log (canvasArea)*/
-
-
-const descargarMeme = () => {
-domtoimage.toBlob(canvasArea).then(function (blob) {
-saveAs(blob, "aqui-mi-meme.jpg");
-});
-};
-
-btnDown.addEventListener("click", descargarMeme);
-
-
 //Padding
-
-let spacingBorders = $ ("#padding-options")
 
 spacingBorders.addEventListener('input', (event)=>{
 let selected = event.target.value;
@@ -219,8 +212,6 @@ pBottomText.style.padding = `${selected}px`
 
 //LineHeight
 
-let spacingLetters = $ ("#spacing-letters")
-
 spacingLetters.addEventListener('input', (event)=>{
 let selectedSpacing = event.target.value;
 
@@ -229,7 +220,49 @@ pBottomText.style.lineHeight = selectedSpacing
 })
 
     
-    
+/////////////////////IMAGE PANEL/////////////////////////////  
+
+//FILTROS//
+
+//variables
+
+let inputBright = $("#bright-input");
+let inputOpacity = $("#input-opacity");
+let inputContrast = $("#input-contraste");
+let inputBlur = $("#input-desenfoque");
+let inputGreys = $("#input-grises");
+let inputSepia = $("#input-sepia");
+let inputHue = $("#input-hue");
+let inputSaturated = $("#input-saturado");
+let inputNegative = $("#input-negativo");
+let memeBox = $("#image-meme");
 
 
-  
+//function
+
+const settingFilters = () => {
+   let brightness = inputBright.value = 1;
+   let opacity = inputOpacity.value;
+   let contrast = inputContrast.value;
+   let blur = inputBlur.value;
+   let greys = inputGreys.value;
+   let sepia = inputSepia.value;
+   let hue = inputHue.value;
+   let saturated = inputSaturated.value;
+   let negative = inputNegative.value;
+   memeBox.style.filter = `brightness(${brightness}) opacity(${opacity}) contrast(${contrast}%) blur(${blur}px) grayscale(${greys}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturated}%) invert(${negative}%)`;
+};
+
+
+//filters
+
+inputBright.addEventListener("change", settingFilters);
+inputOpacity.addEventListener("change", settingFilters);
+inputContrast.addEventListener("change", settingFilters);
+inputBlur.addEventListener("change", settingFilters);
+inputGreys.addEventListener("change", settingFilters);
+inputSepia.addEventListener("change", settingFilters);
+inputHue.addEventListener("change", settingFilters);
+inputSaturated.addEventListener("change", settingFilters);
+inputNegative.addEventListener("change", settingFilters);
+
