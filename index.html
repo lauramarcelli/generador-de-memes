@@ -20,13 +20,13 @@
     <title>Editor de memes</title>
 </head>
 <body>    
-    <div>
+    <div id="gral">
         <header>
             <div>
                 <img src="imagenes/690-6900252_doge-meme-png-thug-life-dog-png-transparent.png" class="cheems" alt="">
                 </div>
             <h1>Generador de Memes</h1>           
-            <div class="buttons-header">
+            <nav class="buttons-header">
                 <button id="btn-img" class="button-header">
                     <i class="fa-solid fa-image"></i>
                     Imagen</button>
@@ -36,13 +36,13 @@
                 <button class="button-header"id="btn">
                     Modo Oscuro</i>
                 </button>
-            </div>
+            </nav>
         </header>
         <main>
             <div class="canvas-box">
                 <div id="canvass" class="canvas">
                     <p class="text-t" id="top-text">Top Text</p>           
-                    <div src alt id="image-meme" class=".image-m"></div>
+                    <div id="image-meme" class="image-m"></div>
                     <p class="text-b" id="bottom-text" >Bottom Text</p>               
                 </div>
             </div>   
@@ -50,6 +50,7 @@
                 <i class="fa-solid fa-download"></i>
                 Descargar meme</button>
         </main>
+    <!--PANEL TEXTO-->    
         <aside id="container-text" class="text">
              <section class="panel-text">
                 <h2>Texto</h2>
@@ -102,14 +103,14 @@
                                 <h3>Color</h3>
                                 <div class="input-background-color">
                                     <input type="color" id="fontcolor" class="input-color" value="#000000">
-                                    <span>#000000</span>
+                                    <span id="span-fontcolor">#000000</span>
                                 </div>    
                             </div>
                             <div>
                                 <h3>Fondo</h3>
                                 <div class="input-back-color">
                                     <input type="color" id="backcolor" class="input-b-color" value="#FFFFFF">
-                                    <span>#FFFFFF</span>
+                                    <span id="span-backcolor">#FFFFFF</span>
                                 </div>
                                
                             </div>                          
@@ -148,6 +149,7 @@
                 
             </section>
         </aside>
+    <!--PANEL IMAGEN-->
         <aside id="container-imagen" class="image">
             <section class="panel-image">
                 <h2>Imagen</h2>
@@ -159,13 +161,13 @@
                     <h3>Fondo</h3>
                     <div class="background-inputs">
                         <div class="input-color-container"> 
-                            <input type="color" class="input-color" value="#FFFFFF">
-                              <span class="label">#FFFFFF</span>
+                            <input id="color-efect" type="color" class="input-color" value="#FFFFFF">
+                            <span id="color-span"class="label">#FFFFFF</span>
                         </div>
                        
                         <div>
-                            <select name="blend-mode" id="" class="blend-input">
-                                <option value="none">Ninguno</option>
+                            <select name="blend-mode" id="blending-options" class="blend-input">
+                                <option value="unset">Ninguno</option>
                                 <option value="lighten">Aclarar</option>
                                 <option value="darken">Oscurecer</option>
                                 <option value="difference">Diferencia</option>
@@ -183,12 +185,7 @@
                         <div class="panel-control-slider">
 
                             <label class="filters" for="bright-input">BRILLO</label>
-                            <input type="range" 
-                            id="bright-input" 
-                            min="0" 
-                            max="1" 
-                            step="0.1" 
-                            value="1"/>
+                            <input type="range" id="bright-input" min="0" max="1" step="0.1" value="1"/>
                             
                             <label class="filters" for="input-opacity">OPACIDAD</label>
                             <input type="range" id="input-opacity" min="0" max="1" step="0.1" value="1"/>

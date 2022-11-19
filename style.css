@@ -9,9 +9,14 @@ color: black;
 font-size: 15px;
 font-weight: 300;
 }
-
-main{
-max-width: 500vw;    
+.gral{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+main{        
+max-width: 100%;    
 background-color: rgb(232, 232, 53);
 min-height: calc(100vh - 150px);
 }
@@ -51,7 +56,7 @@ display: flex;
 align-items: center; 
 background-color: rgb(124, 232, 53);
 height: 150px;
-min-width: 100%;
+width: 100%;
 text-align: center;
 padding: 15px;
 }
@@ -1127,3 +1132,29 @@ color: white;
 .dark-theme .padding-options{
 color: white;
 }
+
+
+/*RESPONSIVE*/
+
+
+/*cellphone*/
+
+@media (max-width: 460px){
+    header{
+        width: 100%;
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main{
+        width: 300px;
+        height: 450px;
+    }
+
+
+}    
