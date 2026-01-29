@@ -9,31 +9,37 @@ color: black;
 font-size: 15px;
 font-weight: 300;
 }
-.gral{
+
+#app{
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 260px;
 }
+.content{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 main{        
-width: 100%;    
-background-color: rgb(232, 232, 53);
-min-height: calc(100vh - 150px);
+flex: 1;
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
-padding-top: 60px;
+padding-top: 40px;
+background-color: rgb(232, 232, 53);
+width: 100%;
 }
 
 h1{
 font-size: 40px;
 font-weight: 700;
-margin: 0 auto;
 font-family: 'Poppins', sans-serif;
 color: black;
-margin-bottom: 60px;
 text-align: center;
+grid-column: 2;
+grid-row: 1;
+margin: 0;
 }
 
 h2{
@@ -58,50 +64,71 @@ font-family: 'Poppins', sans-serif;
 
 header{
 display: flex; 
-align-items: center; 
+justify-content: center; 
 background-color: rgb(124, 232, 53);
-height: 150px;
-width: 100%;
-text-align: center;
-padding: 15px;
+padding: 24px;
 }
-    
+
+.header-inner{
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
 .canvas{ 
-height: 500px;	
+height: 500px;
+width: 800px;
+max-width: 90vw;	
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin-bottom: 30px;
-max-width: 500px;
-width: 100%;	      
+margin-bottom: 30px;   
 text-align: center;
 font-weight: 900;
 background-color: rgb(255, 255, 255);
 }   
 
+.canvas-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   gap: 20px;
+}
+
 .canvas-box{
 display: flex;
 justify-content: center;
-align-items: center;
 width: 100%;
-/*margin-top: 40px;*/
+}
+
+.buttons-header {
+grid-column: 2;
+grid-row: 2;
+display: flex;
+justify-content: center;
+gap: 16px;
 }
 
 .button-header {
-justify-content: center; 
-margin-left: 10px;
-position: relative;
-left: -120%; 
-margin-top: 70px;
-cursor: pointer; 
-color:black;
-border: none;
-border-radius: 10px;
-padding: 0px 10px;
-background-color: rgb(232, 232, 53);
-font-weight: 400;
-height: 36px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 12px;
+  background-color: rgb(232, 232, 53);
+  font-weight: 400;
+  height: 36px;
+}
+
+.download-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .fa-solid {
@@ -114,8 +141,9 @@ background-color:rgb(188, 188, 42);
 
 
 .cheems{
-height: 130px;
-width: 130px;
+grid-column: 1 ;
+grid-row: 1 / span 2;
+width: 80px;
 border-radius: 50px;    
 }
 
@@ -147,14 +175,10 @@ cursor: pointer;
 color:white;
 border: none;
 border-radius: 10px;
-padding: 10px 10px;
+padding: 10px;
 background-color:rgb(89, 196, 232);
 font-weight: 400;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: auto;
-margin-bottom: 5px;
+min-width: 180px;
 }
 
 main button:hover{
@@ -167,30 +191,22 @@ background-color:rgb(3, 3, 181);
 .image{
 flex-direction: column;
 justify-content: flex-start;
-float: right;
 width: 260px;
 height: 100vh;
 background-color: rgb(232, 53, 232);
-overflow: auto;
-position: fixed;
+overflow-y: auto;
 padding: 30px 15px;
-top: 0;
-right: 0;   
 }
 
 
 .text{
 flex-direction: column;
 justify-content: flex-start;
-float: right;
 width: 260px;
 height: 100vh;
 background-color: rgb(62, 62, 230);
-overflow: auto;
-position: fixed;
+overflow-y: auto;
 padding: 30px 15px;
-top: 0;
-right: 0;       
 }
 
 /*Panel Imagen*/
@@ -571,23 +587,23 @@ display: none;
 /******************dark-theme*******************/
 
 .dark-theme{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
 font-family: 'Poppins', sans-serif;  
 color: white;
 font-size: 15px;
 font-weight: 300;
 }
 
+.dark-theme #app{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+}
   
 .dark-theme h1{
 font-size: 40px;
 font-weight: 700;
-margin-left: 400px;
 font-family: 'Poppins', sans-serif;
 color: white;
-margin-bottom: 60px;
 text-align: center;
 }
     
@@ -608,22 +624,14 @@ color: white;
 font-size: 20px;
 font-family: 'Poppins', sans-serif;
 }
-     
-.dark-theme .button-header{
 
+.dark-theme body {
+  background-color: rgb(49, 49, 55);
+}
+
+.dark-theme .button-header{
 color:white;
 background-color: rgb(39, 41, 44);
-margin-left: 10px;
-position: relative;
-left: -120%; 
-margin-top: 70px;
-cursor: pointer; 
-border: none;
-border-radius: 10px;
-padding: 0px 10px;
-font-weight: 400;
-height: 36px;
-justify-content: center; 
 }
     
 .dark-theme .fa-solid {
@@ -640,29 +648,18 @@ background-color: rgb(6, 7, 7);
     
 .dark-theme header{
 background-color: rgb(4, 4, 4);
-display: flex; 
-align-items: center; 
-height: 150px;
-min-width: 100%;
-text-align: center;
-padding: 15px;
 }
 
 
 .dark-theme main{
 background-color: rgb(49, 49, 55);
-max-width: 500vw;
-min-height: calc(100vh - 150px)
 }
 
 
 .dark-theme .canvas{
-height: 500px;	
 display: flex;
 flex-direction: column;
 margin-bottom: 30px;
-max-width: 500px;
-width: 100%;
 justify-content: center;	      
 text-align: center;
 font-weight: 900;
@@ -698,17 +695,8 @@ height: 100%;
 }
    
 .dark-theme main button{
-cursor: pointer; 
-color:white;
-border: none;
-border-radius: 10px;
-padding: 10px 10px;
 background-color:blue;
-font-weight: 400;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: auto;
+
 }
     
 .dark-theme main button:hover{
@@ -722,16 +710,16 @@ background-color:rgb(3, 3, 181);
 display: block;
 flex-direction: column;
 justify-content: flex-start;
-float: right;
 width: 260px;
 height: 100%;
 background-color: rgb(85, 85, 88);
 overflow: auto;
-position: fixed;
 z-index: 10;
 padding: 30px 15px;
 top: 0;
 right: 0;   
+position: static;
+float: none;
 }
     
     
@@ -744,11 +732,12 @@ width: 260px;
 height: 100%;
 background-color: rgb(85, 85, 88);
 overflow: auto;
-position: fixed;
 z-index: 10;
 padding: 30px 15px;
 top: 0;
 right: 0;       
+position: static;
+float: none;    
 }    
  
 /*Panel Imagen*/

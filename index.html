@@ -20,36 +20,45 @@
     <title>Editor de memes</title>
 </head>
 <body>    
-    <div id="gral">
-        <header>
-            <div>
-                <img src="imagenes/690-6900252_doge-meme-png-thug-life-dog-png-transparent.png" class="cheems" alt="">
+    <div id="app">
+        <div class="content">
+             <header>
+                <div class="header-inner">
+                    <img src="imagenes/690-6900252_doge-meme-png-thug-life-dog-png-transparent.png" class="cheems" alt="">
+                    <h1>Generador de Memes</h1>            
+                    <nav class="buttons-header">
+                        <button id="btn-img" class="button-header">
+                        <i class="fa-solid fa-image"></i>
+                        Imagen</button>
+                        <button id="btn-text" class="button-header">
+                        <i class="fa-solid fa-font"></i>
+                        Texto</button>
+                        <button class="button-header"id="btn">
+                        Modo Oscuro</i>
+                        </button>
+                    </nav>
                 </div>
-            <h1>Generador de Memes</h1>           
-            <nav class="buttons-header">
-                <button id="btn-img" class="button-header">
-                    <i class="fa-solid fa-image"></i>
-                    Imagen</button>
-                <button id="btn-text" class="button-header">
-                    <i class="fa-solid fa-font"></i>
-                    Texto</button>
-                <button class="button-header"id="btn">
-                    Modo Oscuro</i>
-                </button>
-            </nav>
-        </header>
+            </header>
         <main>
-            <div class="canvas-box">
+            <div class="canvas-container">
+                <div class="canvas-box">
                 <div id="canvass" class="canvas">
                     <p class="text-t" id="top-text">Top Text</p>           
                     <div id="image-meme" class="image-m"></div>
                     <p class="text-b" id="bottom-text" >Bottom Text</p>               
                 </div>
             </div>   
+           <div class="download-container">
             <button id="btndownload">
                 <i class="fa-solid fa-download"></i>
-                Descargar meme</button>
+                Descargar meme
+            </button>
+           </div>
+            </div>    
         </main>
+
+        </div>
+       
     <!--PANEL TEXTO-->    
         <aside id="container-text" class="text">
              <section class="panel-text">
