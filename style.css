@@ -141,10 +141,11 @@ background-color:rgb(188, 188, 42);
 
 
 .cheems{
+height: 130px;
 grid-column: 1 ;
 grid-row: 1 / span 2;
-width: 80px;
-border-radius: 50px;    
+width: auto;
+border-radius: 12px;    
 }
 
 .text-t{
